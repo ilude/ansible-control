@@ -7,3 +7,5 @@ services:
     image: ${DEPLOY_STAGE:-development}/ansible-control
     environment:
       - SSH_PRIVATE_KEY=${SSH_PRIVATE_KEY}
+    volumes:
+      - .:/app

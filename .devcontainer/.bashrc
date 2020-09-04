@@ -9,4 +9,4 @@ alias la='ls -A'
 alias cls='clear'
 
 [ -d $PROJECT_PATH ] || git clone $GIT_REPO $PROJECT_PATH
-(cd $PROJECT_PATH; git pull)
+git pull

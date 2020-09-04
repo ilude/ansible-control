@@ -1,15 +1,15 @@
 // For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.134.1/containers/docker-from-docker-compose
 {
-	"name": "Docker from Docker Compose",
+	"name": "Ansible Control",
 	"dockerComposeFile": "docker-compose.yml",
-	"service": "docker-from-docker",
+	"service": "ansible-control",
 	"workspaceFolder": "/app",
 
 	// Use this environment variable if you need to bind mount your local source code into a new container.
-	"remoteEnv": {
-		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
-	},
+	// "remoteEnv": {
+	// 	"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+	// },
 	
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
@@ -17,9 +17,7 @@
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [
-		"ms-azuretools.vscode-docker"
-	]
+	"extensions": []
 
 	// Uncomment the next line if you want start specific services in your Docker Compose config.
 	// "runServices": [],

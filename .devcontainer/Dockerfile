@@ -11,12 +11,13 @@ RUN \
   apk add --no-cache bash ca-certificates cifs-utils curl git openssh-client python3 py3-pip ssmtp tzdata && \
   rm -rf /var/cache/apk/* && \
   ln -snf /etc/localtime /usr/share/zoneinfo/$TZ && echo $TZ > /etc/timezone && \
-  mkdir -p $APP/.devcontainer  && \
+  mkdir -p $APP/.ansible-control  && \
   mkdir -p $HOME/.ssh && \
   ssh-keyscan -H github.com >> $HOME/.ssh/known_hosts && \
   ssh-keyscan -H bitbucket.org >> $HOME/.ssh/known_hosts && \
+  pip3 install ansible && \
   update-ca-certificates 
 
-COPY /home/* $HOME/
+COPY .bashrc $HOME/
 COPY /etc/gitconfig /etc/gitconfig
 COPY /etc/profile.d/*.sh /etc/profile.d/

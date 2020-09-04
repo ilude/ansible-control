@@ -530,4 +530,4 @@ __git_ps1 ()
         return $exit
 }
 
-PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 "\[\033[0;33m\][\[\033[1;36m\]%s\[\033[0;33m\]]")\[\e[0m\]$ ' 
+PS1='${debian_chroot:+($debian_chroot)}\h:\w$(__git_ps1 "\[\033[0;33m\][\[\033[1;36m\]%s\[\033[0;33m\]]")\[\e[0m\]$ ' 
